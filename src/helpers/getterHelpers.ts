@@ -68,7 +68,7 @@ interface TokenMetadataResponse {
     address: string;
 }
 
-export const getUserTokens = async (address: string) => {
+export const getConnectedUserTokens = async (address: string) => {
     const tokenMetadata: any = [];
     const balances = await alchemy.core.getTokenBalances(address);
 

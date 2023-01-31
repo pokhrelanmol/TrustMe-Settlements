@@ -6,10 +6,7 @@ type selectprops = {
     name: string;
     OptionData: Array<{
         symbol: string;
-        address: string;
-        name: string;
-        logo: string;
-        decimals: number;
+        id: number;
     }>;
 };
 
@@ -26,7 +23,7 @@ const Tokendrop = (props: selectprops) => {
                 <option className="items-center text-small">{title}</option>
                 {OptionData.map((item) => (
                     <option
-                        key={item.address}
+                        key={item.symbol}
                         className="flex flex-row items-center justify-start text-xm"
                     >
                         {item.symbol}
